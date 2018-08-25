@@ -7,26 +7,61 @@ Dark green: #28b485
 
 */
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     padding: 20px;
-    font-family: 'lato',sans-serif;
-    font-weight: 400;   
+    font-family: 'lato', sans-serif;
+    font-weight: 400;
     font-size: 16px;
-    line-height: 1.7;   
-    color: #777; 
+    line-height: 1.7;
+    color: #777;
 }
 
-.header{
-    background-image: linear-gradient(rgb(126, 213, 111,0.8),rgb(40, 180, 133,0.8)),url('../img/hero.jpg');
+.header {
+    background-image: linear-gradient(rgb(126, 213, 111, 0.8), rgb(40, 180, 133, 0.8)), url('../img/hero.jpg');
     background-size: cover;
     background-position: top;
     height: 95vh;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+}
+
+.logo-container {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+}
+
+.logo {
+    height: 35px;
+}
+
+.hero-text {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.primary-head {
+    display: block;
+    letter-spacing: 26px;
+    font-weight: 400;
+    font-size: 60px;
+}
+
+.secondary-head {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 14.1px;
+}
+
+.hero-container{
+    left: 50%;
+    top: 40%;
+    position: absolute;
+    transform: translate(-50%,-50%);
 }
