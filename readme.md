@@ -1,1 +1,1 @@
-![Alt text](img/screenshots/feature-hero-text.png?raw=true "hero-text")
+![Alt text](img/screenshots/header.png?raw=true 'Devyunus-CSS-diary-header')
