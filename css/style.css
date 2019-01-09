@@ -5,97 +5,120 @@ Light green: #7ed56f
 Medium green: #55c57a
 Dark green: #28b485
 
+References : 
+
+gradients :
+
+https://uigradients.com
+https://webgradients.com
+https://gradienthunt.com
+
+
+Create polygons:
+
+https://bennettfeely.com/clippy
+
 */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  padding: 20px;
-  font-family: 'lato', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
-  color: #777;
+    padding: 20px;
+    font-family: 'lato', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    /*It means line height would be 1.7% bigger than original*/
+    color: #777;
 }
 
 .header {
-  background-image: linear-gradient(
-      rgb(126, 213, 111, 0.8),
-      rgb(40, 180, 133, 0.8)
-    ),
-    url('../img/hero.jpg');
-  background-size: cover;
-  background-position: top;
-  height: 95vh;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
-}
+    background-image: linear-gradient(
+        to right bottom,
+         rgb(126, 213, 111, 0.8), 
+         rgb(40, 180, 133, 0.8)), 
+         url('../img/hero.jpg');
 
+    background-size: cover;
+    /* try to fit whatever the width of viewport is */
+    background-position: top;
+    /* it will keep image top as it is if we change the size of screen and crop image from other sides */
+    height: 95vh;
+    /* 95% of view port height (screen size) */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+
+    position: relative;
+    /* We need to put position as relative as we have position: absolute in his child(.logo-container) element . so position: absolute will be from .header element not from body */
+}
+    
 .logo-container {
-  position: absolute;
-  top: 40px;
-  left: 40px;
+    position: absolute;
+    top: 40px;
+    left: 40px;
 }
 
 .logo {
-  height: 35px;
+    height: 35px;
 }
 
 .hero-text {
-  text-transform: uppercase;
-  color: #fff;
+    text-transform: uppercase;
+    color: #fff;
 }
 
 .primary-head {
-  display: block;
-  letter-spacing: 26px;
-  font-weight: 400;
-  font-size: 60px;
+    display: block;
+    letter-spacing: 26px;
+    font-weight: 400;
+    font-size: 60px;
 }
 
 .secondary-head {
-  font-size: 20px;
-  font-weight: 700;
-  letter-spacing: 14.1px;
-  margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 14.1px;
+    margin-bottom: 20px;
 }
 
 .hero-container {
-  left: 50%;
-  top: 40%;
-  position: absolute;
-  transform: translate(-50%, -50%);
+    left: 50%;
+    top: 40%;
+    position: absolute;
+    transform: translate(-50%, -50%); 
+    /* it is relative to element itself */
 }
 
 .btn {
-  padding: 15px 40px;
-  text-decoration: none;
-  border: none;
-  font-weight: 700;
-  cursor: pointer;
+    padding: 15px 40px;
+    text-decoration: none;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
 }
 
 .btn-round {
-  border-radius: 500px;
+    border-radius: 500px;
 }
 
 .btn-light {
-  color: #777;
-  background-color: #fff;
-  outline: none;
+    color: #777;
+    background-color: #fff;
+    outline: none;
 }
 
 .text-uppercase {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .text-center {
-  text-align: center;
+    text-align: center;
 }
+
 .btn-hero {
-  margin-top: 20px;
+    margin-top: 20px;
 }
