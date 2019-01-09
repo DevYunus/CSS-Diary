@@ -37,12 +37,7 @@ body {
 }
 
 .header {
-    background-image: linear-gradient(
-        to right bottom,
-         rgb(126, 213, 111, 0.8), 
-         rgb(40, 180, 133, 0.8)), 
-         url('../img/hero.jpg');
-
+    background-image: linear-gradient( to right bottom, rgb(126, 213, 111, 0.8), rgb(40, 180, 133, 0.8)), url('../img/hero.jpg');
     background-size: cover;
     /* try to fit whatever the width of viewport is */
     background-position: top;
@@ -51,11 +46,10 @@ body {
     /* 95% of view port height (screen size) */
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
     clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
-
     position: relative;
     /* We need to put position as relative as we have position: absolute in his child(.logo-container) element . so position: absolute will be from .header element not from body */
 }
-    
+
 .logo-container {
     position: absolute;
     top: 40px;
@@ -76,6 +70,8 @@ body {
     letter-spacing: 26px;
     font-weight: 400;
     font-size: 60px;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
 }
 
 .secondary-head {
@@ -89,7 +85,7 @@ body {
     left: 50%;
     top: 40%;
     position: absolute;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
     /* it is relative to element itself */
 }
 
@@ -122,3 +118,17 @@ body {
 .btn-hero {
     margin-top: 20px;
 }
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px)
+    }
+    50% {}
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInRight {}
