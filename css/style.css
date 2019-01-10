@@ -72,13 +72,19 @@ body {
     font-size: 60px;
     animation-name: moveInLeft;
     animation-duration: 3s;
+    backface-visibility: hidden;
+    /* it hides background on text, if we are rotating anithing then we can hide background stuff */
 }
 
 .secondary-head {
+    display: block;
     font-size: 20px;
     font-weight: 700;
     letter-spacing: 14.1px;
     margin-bottom: 20px;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    backface-visibility: hidden;
 }
 
 .hero-container {
@@ -131,4 +137,21 @@ body {
     }
 }
 
-@keyframes moveInRight {}
+
+@keyframes moveInRight {
+
+    0% {
+        opacity: 0;
+        transform: translateX(200px)
+    }
+    50% {}
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+
+.btn:hover{
+    transform: translateY(-5px);
+}
