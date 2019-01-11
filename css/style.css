@@ -101,6 +101,7 @@ body {
     border: none;
     font-weight: 700;
     cursor: pointer;
+    transition:all .2s;
 }
 
 .btn-round {
@@ -153,5 +154,12 @@ body {
 
 
 .btn:hover{
-    transform: translateY(-5px);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0, .2)
 }
+
+.btn:active{
+    transform: translateY(2px); 
+    box-shadow: 0 5px 10px rgba(0,0,0, .2)
+}
+
