@@ -26,11 +26,15 @@ https://bennettfeely.com/clippy
     box-sizing: border-box;
 }
 
+html{
+    font-size: 10px;
+}
+
 body {
-    padding: 20px;
+    padding: 2rem;
     font-family: 'lato', sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.6rem;
     line-height: 1.7;
     /*It means line height would be 1.7% bigger than original*/
     color: #777;
@@ -52,12 +56,12 @@ body {
 
 .logo-container {
     position: absolute;
-    top: 40px;
-    left: 40px;
+    top: 4rem;
+    left: 4rem;
 }
 
 .logo {
-    height: 35px;
+    height: 3.5rem;
 }
 
 .hero-text {
@@ -67,9 +71,9 @@ body {
 
 .primary-head {
     display: block;
-    letter-spacing: 26px;
+    letter-spacing: 2.6rem;
     font-weight: 400;
-    font-size: 60px;
+    font-size: 6rem;
     animation-name: moveInLeft;
     animation-duration: 3s;
     backface-visibility: hidden;
@@ -78,10 +82,10 @@ body {
 
 .secondary-head {
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 14.1px;
-    margin-bottom: 20px;
+    letter-spacing: 1.41rem;
+    margin-bottom: 2rem;
     animation-name: moveInRight;
     animation-duration: 3s;
     backface-visibility: hidden;
@@ -96,7 +100,7 @@ body {
 }
 
 .btn {
-    padding: 15px 40px;
+    padding: 1.5rem 4rem;
     text-decoration: none;
     border: none;
     font-weight: 700;
@@ -105,7 +109,7 @@ body {
 }
 
 .btn-round {
-    border-radius: 500px;
+    border-radius: 50rem;
 }
 
 .btn-light {
@@ -123,13 +127,13 @@ body {
 }
 
 .btn-hero {
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 @keyframes moveInLeft {
     0% {
         opacity: 0;
-        transform: translateX(-100px)
+        transform: translateX(-10rem)
     }
     50% {}
     100% {
@@ -143,7 +147,7 @@ body {
 
     0% {
         opacity: 0;
-        transform: translateX(200px)
+        transform: translateX(20rem)
     }
     50% {}
     100% {
@@ -154,12 +158,12 @@ body {
 
 
 .btn:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0,0,0, .2)
+    transform: translateY(-.2rem);
+    box-shadow: 0 1rem 2rem rgba(0,0,0, .2)
 }
 
 .btn:active{
-    transform: translateY(2px); 
-    box-shadow: 0 5px 10px rgba(0,0,0, .2)
+    transform: translateY(.2rem); 
+    box-shadow: 0 .5rem 1rem rgba(0,0,0, .2)
 }
 
