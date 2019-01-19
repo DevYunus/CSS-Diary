@@ -19,13 +19,23 @@ Create polygons:
 https://bennettfeely.com/clippy
 
 */
+
+$color-primary: #55c57a;
+$color-primary-dark: #28b485;
+$color-primary-light: #7ed56f;
+$color-grey-dark: #777;
+$color-white: #fff;
+$color-black: #000;
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 html {
-  font-size: 10px; }
+  font-size: 10px;
+}
 
 body {
   padding: 2rem;
@@ -34,10 +44,16 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   /*It means line height would be 1.7% bigger than original*/
-  color: #777; }
+  color: $color-grey-dark;
+}
 
 .header {
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url('../img/hero.jpg');
   background-size: cover;
   /* try to fit whatever the width of viewport is */
   background-position: top;
@@ -47,26 +63,35 @@ body {
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
   position: relative;
-  /* We need to put position as relative as we have position: absolute in his child(.header__logo-container) element . so position: absolute will be from .header element not from body */ }
-  .header__logo-container {
+  /* We need to put position as relative as we have position: absolute in his child(.header__logo-container) element . so position: absolute will be from .header element not from body */
+
+  &__logo-container {
     position: absolute;
     top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
+    left: 4rem;
+  } 
+
+  &__logo {
+    height: 3.5rem;
+  }
+
+  &__text-box {
     left: 50%;
     top: 40%;
     position: absolute;
     transform: translate(-50%, -50%);
-    /* it is relative to element itself */ }
-  .header__btn-hero {
-    margin-top: 2rem; }
+    /* it is relative to element itself */
+  }
+
+  &__btn-hero {
+    margin-top: 2rem;
+  }
+}
 
 .heading-primary {
   text-transform: uppercase;
-  color: #fff; }
-  .heading-primary--main {
+  color: $color-white;
+  &--main {
     display: block;
     letter-spacing: 2.6rem;
     font-weight: 400;
@@ -74,8 +99,10 @@ body {
     animation-name: moveInLeft;
     animation-duration: 3s;
     backface-visibility: hidden;
-    /* it hides background on text, if we are rotating anithing then we can hide background stuff */ }
-  .heading-primary--sub {
+    /* it hides background on text, if we are rotating anithing then we can hide background stuff */
+  }
+  
+  &--sub {
     display: block;
     font-size: 2rem;
     font-weight: 700;
@@ -83,7 +110,11 @@ body {
     margin-bottom: 2rem;
     animation-name: moveInRight;
     animation-duration: 3s;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+  }
+}
+
+
 
 .btn {
   padding: 1.5rem 4rem;
@@ -91,40 +122,64 @@ body {
   border: none;
   font-weight: 700;
   cursor: pointer;
-  transition: all 0.2s; }
-  .btn--round {
-    border-radius: 50rem; }
-  .btn--light {
-    color: #777;
-    background-color: #fff;
-    outline: none; }
-  .btn:hover {
+  transition: all 0.2s;
+
+  &--round {
+    border-radius: 50rem;
+  }
+  
+  &--light {
+    color: $color-grey-dark;
+    background-color: $color-white;
+    outline: none;
+  }
+
+  &:hover {
     transform: translateY(-0.2rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-  .btn:active {
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+  }
+  
+  &:active {
     transform: translateY(0.2rem);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+  }
+  
+  
+}
+
+
 
 .text-uppercase {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .text-center {
-  text-align: center; }
+  text-align: center;
+}
 
 @keyframes moveInLeft {
   0% {
     opacity: 0;
-    transform: translateX(-10rem); }
-  50% { }
+    transform: translateX(-10rem);
+  }
+  50% {
+  }
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
 
 @keyframes moveInRight {
   0% {
     opacity: 0;
-    transform: translateX(20rem); }
-  50% { }
+    transform: translateX(20rem);
+  }
+  50% {
+  }
   100% {
     opacity: 1;
-    transform: translate(0); } }
+    transform: translate(0);
+  }
+}
+

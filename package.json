@@ -1,0 +1,27 @@
+{
+  "name": "css-diary",
+  "version": "1.0.0",
+  "description": "CSS workshop",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile:sass":"node-sass sass/main.scss css/style.css",
+    "compile:sass-watch":"node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevYunus/CSS-Diary.git"
+  },
+  "keywords": [
+    "CSS"
+  ], 
+  "author": "Yunus Shaikh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DevYunus/CSS-Diary/issues"
+  },
+  "homepage": "https://github.com/DevYunus/CSS-Diary#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
