@@ -1,0 +1,33 @@
+
+
+.btn {
+    padding: 1.5rem 4rem;
+    text-decoration: none;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.2s;
+  
+    &--round {
+      border-radius: 50rem;
+    }
+    
+    &--light {
+      color: $color-grey-dark;
+      background-color: $color-white;
+      outline: none;
+    }
+  
+    &:hover {
+      transform: translateY(-0.2rem);
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
+    }
+    
+    &:active {
+      transform: translateY(0.2rem);
+      box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
+    }
+    
+    
+  }
+  
