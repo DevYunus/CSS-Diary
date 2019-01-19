@@ -1,0 +1,41 @@
+.header {
+    background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary-light, 0.8),
+        rgba($color-primary-dark, 0.8)
+      ),
+      url('../img/hero.jpg');
+    background-size: cover;
+    /* try to fit whatever the width of viewport is */
+    background-position: top;
+    /* it will keep image top as it is if we change the size of screen and crop image from other sides */
+    height: 95vh;
+    /* 95% of view port height (screen size) */
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
+    position: relative;
+    /* We need to put position as relative as we have position: absolute in his child(.header__logo-container) element . so position: absolute will be from .header element not from body */
+  
+    &__logo-container {
+      position: absolute;
+      top: 4rem;
+      left: 4rem;
+    } 
+  
+    &__logo {
+      height: 3.5rem;
+    }
+  
+    &__text-box {
+      left: 50%;
+      top: 40%;
+      position: absolute;
+      transform: translate(-50%, -50%);
+      /* it is relative to element itself */
+    }
+  
+    &__btn-hero {
+      margin-top: 2rem;
+    }
+  }
+  

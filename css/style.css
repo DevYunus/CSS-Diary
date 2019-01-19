@@ -19,6 +19,24 @@ Create polygons:
 https://bennettfeely.com/clippy
 
 */
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  50% { }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20rem); }
+  50% { }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
 * {
   margin: 0;
   padding: 0;
@@ -28,13 +46,63 @@ html {
   font-size: 10px; }
 
 body {
+  color: #777; }
+
+body {
   padding: 2rem;
   font-family: 'lato', sans-serif;
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  /*It means line height would be 1.7% bigger than original*/
-  color: #777; }
+  /*It means line height would be 1.7% bigger than original*/ }
+
+.heading-primary {
+  text-transform: uppercase;
+  color: #fff; }
+  .heading-primary--main {
+    display: block;
+    letter-spacing: 2.6rem;
+    font-weight: 400;
+    font-size: 6rem;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
+    backface-visibility: hidden;
+    /* it hides background on text, if we are rotating anithing then we can hide background stuff */ }
+  .heading-primary--sub {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 1.41rem;
+    margin-bottom: 2rem;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    backface-visibility: hidden; }
+
+.text-uppercase {
+  text-transform: uppercase; }
+
+.text-center {
+  text-align: center; }
+
+.btn {
+  padding: 1.5rem 4rem;
+  text-decoration: none;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s; }
+  .btn--round {
+    border-radius: 50rem; }
+  .btn--light {
+    color: #777;
+    background-color: #fff;
+    outline: none; }
+  .btn:hover {
+    transform: translateY(-0.2rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:active {
+    transform: translateY(0.2rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .header {
   background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
@@ -62,69 +130,3 @@ body {
     /* it is relative to element itself */ }
   .header__btn-hero {
     margin-top: 2rem; }
-
-.heading-primary {
-  text-transform: uppercase;
-  color: #fff; }
-  .heading-primary--main {
-    display: block;
-    letter-spacing: 2.6rem;
-    font-weight: 400;
-    font-size: 6rem;
-    animation-name: moveInLeft;
-    animation-duration: 3s;
-    backface-visibility: hidden;
-    /* it hides background on text, if we are rotating anithing then we can hide background stuff */ }
-  .heading-primary--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.41rem;
-    margin-bottom: 2rem;
-    animation-name: moveInRight;
-    animation-duration: 3s;
-    backface-visibility: hidden; }
-
-.btn {
-  padding: 1.5rem 4rem;
-  text-decoration: none;
-  border: none;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s; }
-  .btn--round {
-    border-radius: 50rem; }
-  .btn--light {
-    color: #777;
-    background-color: #fff;
-    outline: none; }
-  .btn:hover {
-    transform: translateY(-0.2rem);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
-  .btn:active {
-    transform: translateY(0.2rem);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
-
-.text-uppercase {
-  text-transform: uppercase; }
-
-.text-center {
-  text-align: center; }
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  50% { }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(20rem); }
-  50% { }
-  100% {
-    opacity: 1;
-    transform: translate(0); } }

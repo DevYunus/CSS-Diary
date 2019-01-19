@@ -20,166 +20,18 @@ https://bennettfeely.com/clippy
 
 */
 
-$color-primary: #55c57a;
-$color-primary-dark: #28b485;
-$color-primary-light: #7ed56f;
-$color-grey-dark: #777;
-$color-white: #fff;
-$color-black: #000;
+@import "abstracts/variables";
+@import "abstracts/functions";
+@import "abstracts/mixins";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+@import "base/animations";
+@import "base/base";
+@import "base/typography";
+@import "base/utilities";
 
-html {
-  font-size: 10px;
-}
+@import "components/button";
 
-body {
-  padding: 2rem;
-  font-family: 'lato', sans-serif;
-  font-weight: 400;
-  font-size: 1.6rem;
-  line-height: 1.7;
-  /*It means line height would be 1.7% bigger than original*/
-  color: $color-grey-dark;
-}
+@import "layout/header";
+@import "pages/home";
 
-.header {
-  background-image: linear-gradient(
-      to right bottom,
-      rgba($color-primary-light, 0.8),
-      rgba($color-primary-dark, 0.8)
-    ),
-    url('../img/hero.jpg');
-  background-size: cover;
-  /* try to fit whatever the width of viewport is */
-  background-position: top;
-  /* it will keep image top as it is if we change the size of screen and crop image from other sides */
-  height: 95vh;
-  /* 95% of view port height (screen size) */
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 0% 100%);
-  position: relative;
-  /* We need to put position as relative as we have position: absolute in his child(.header__logo-container) element . so position: absolute will be from .header element not from body */
-
-  &__logo-container {
-    position: absolute;
-    top: 4rem;
-    left: 4rem;
-  } 
-
-  &__logo {
-    height: 3.5rem;
-  }
-
-  &__text-box {
-    left: 50%;
-    top: 40%;
-    position: absolute;
-    transform: translate(-50%, -50%);
-    /* it is relative to element itself */
-  }
-
-  &__btn-hero {
-    margin-top: 2rem;
-  }
-}
-
-.heading-primary {
-  text-transform: uppercase;
-  color: $color-white;
-  &--main {
-    display: block;
-    letter-spacing: 2.6rem;
-    font-weight: 400;
-    font-size: 6rem;
-    animation-name: moveInLeft;
-    animation-duration: 3s;
-    backface-visibility: hidden;
-    /* it hides background on text, if we are rotating anithing then we can hide background stuff */
-  }
-  
-  &--sub {
-    display: block;
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 1.41rem;
-    margin-bottom: 2rem;
-    animation-name: moveInRight;
-    animation-duration: 3s;
-    backface-visibility: hidden;
-  }
-}
-
-
-
-.btn {
-  padding: 1.5rem 4rem;
-  text-decoration: none;
-  border: none;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.2s;
-
-  &--round {
-    border-radius: 50rem;
-  }
-  
-  &--light {
-    color: $color-grey-dark;
-    background-color: $color-white;
-    outline: none;
-  }
-
-  &:hover {
-    transform: translateY(-0.2rem);
-    box-shadow: 0 1rem 2rem rgba($color-black, 0.2);
-  }
-  
-  &:active {
-    transform: translateY(0.2rem);
-    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
-  }
-  
-  
-}
-
-
-
-.text-uppercase {
-  text-transform: uppercase;
-}
-
-.text-center {
-  text-align: center;
-}
-
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem);
-  }
-  50% {
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
-
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(20rem);
-  }
-  50% {
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
-}
 
